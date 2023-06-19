@@ -12,9 +12,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("01_Counter") {
+                NavigationLink("01_ReducerProtocol, StoreOf, WithViewStore") {
                     CounterView(
                         store: Store(initialState: Counter.State(), reducer: Counter())
+                    )
+                }
+                
+                NavigationLink("02_TaskResult, run") {
+                    RandomGeneratorView(
+                        store: .init(initialState: RandomGenerator.State(), reducer: RandomGenerator())
                     )
                 }
             }
