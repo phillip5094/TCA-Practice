@@ -25,6 +25,7 @@ struct RandomGeneratorView: View {
                 }
             }
         }
+        ._printChanges("Philip")
     }
 }
 

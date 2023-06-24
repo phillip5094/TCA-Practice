@@ -17,6 +17,8 @@
 		D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FC0962A39DFAB0023EBEA /* RandomGeneratorView.swift */; };
 		D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */; };
 		D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECB2262A38AD10003050CC /* RandomAPI.swift */; };
+		D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */; };
+		D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D93FC0962A39DFAB0023EBEA /* RandomGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorView.swift; sourceTree = "<group>"; };
 		D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
 		D9ECB2262A38AD10003050CC /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
+		D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonView.swift; sourceTree = "<group>"; };
+		D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				D9338F1B2A3454E200B8ADDA /* ContentView.swift */,
 				D9338F2A2A34563400B8ADDA /* 01_ReducerProtocol, StoreOf, WithViewStore */,
 				D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */,
+				D9F6B0F42A46C2B300FA4716 /* 03_printChanges */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -98,6 +103,15 @@
 				D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */,
 			);
 			path = "02_TaskResult, run";
+			sourceTree = "<group>";
+		};
+		D9F6B0F42A46C2B300FA4716 /* 03_printChanges */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */,
+				D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */,
+			);
+			path = 03_printChanges;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,10 +193,12 @@
 				D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */,
 				D9338F302A34565A00B8ADDA /* Counter.swift in Sources */,
 				D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */,
+				D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */,
 				D9338F1C2A3454E200B8ADDA /* ContentView.swift in Sources */,
 				D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */,
 				D9338F2C2A34564800B8ADDA /* CounterView.swift in Sources */,
 				D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */,
+				D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

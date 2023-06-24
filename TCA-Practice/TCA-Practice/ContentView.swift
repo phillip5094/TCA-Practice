@@ -23,6 +23,10 @@ struct ContentView: View {
                         store: .init(initialState: RandomGenerator.State(), reducer: RandomGenerator())
                     )
                 }
+                
+                NavigationLink("03_printChanges") {
+                    TwoButtonView(store: .init(initialState: TwoButton.State(), reducer: TwoButton()._printChanges()))
+                }
             }
         }
     }
