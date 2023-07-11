@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90B29542A5AC1BB00DFF3A4 /* TwoCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B29532A5AC1BB00DFF3A4 /* TwoCounterView.swift */; };
+		D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B29552A5AC1C000DFF3A4 /* TwoCounter.swift */; };
+		D921E9042A56BC7400949A78 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921E9032A56BC7400949A78 /* Root.swift */; };
 		D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */; };
-		D9338F1C2A3454E200B8ADDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F1B2A3454E200B8ADDA /* ContentView.swift */; };
+		D9338F1C2A3454E200B8ADDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F1B2A3454E200B8ADDA /* RootView.swift */; };
 		D9338F1E2A3454E300B8ADDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9338F1D2A3454E300B8ADDA /* Assets.xcassets */; };
 		D9338F212A3454E300B8ADDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9338F202A3454E300B8ADDA /* Preview Assets.xcassets */; };
 		D9338F292A34551D00B8ADDA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = D9338F282A34551D00B8ADDA /* ComposableArchitecture */; };
@@ -22,9 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90B29532A5AC1BB00DFF3A4 /* TwoCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounterView.swift; sourceTree = "<group>"; };
+		D90B29552A5AC1C000DFF3A4 /* TwoCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounter.swift; sourceTree = "<group>"; };
+		D921E9032A56BC7400949A78 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		D9338F162A3454E200B8ADDA /* TCA-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PracticeApp.swift; sourceTree = "<group>"; };
-		D9338F1B2A3454E200B8ADDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9338F1B2A3454E200B8ADDA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D9338F1D2A3454E300B8ADDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9338F202A3454E300B8ADDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9338F2B2A34564800B8ADDA /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D90B29522A5A6ACD00DFF3A4 /* 04_Scope */ = {
+			isa = PBXGroup;
+			children = (
+				D90B29532A5AC1BB00DFF3A4 /* TwoCounterView.swift */,
+				D90B29552A5AC1C000DFF3A4 /* TwoCounter.swift */,
+			);
+			path = 04_Scope;
+			sourceTree = "<group>";
+		};
 		D9338F0D2A3454E100B8ADDA = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */,
-				D9338F1B2A3454E200B8ADDA /* ContentView.swift */,
+				D921E9032A56BC7400949A78 /* Root.swift */,
+				D9338F1B2A3454E200B8ADDA /* RootView.swift */,
 				D9338F2A2A34563400B8ADDA /* 01_ReducerProtocol, StoreOf, WithViewStore */,
 				D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */,
 				D9F6B0F42A46C2B300FA4716 /* 03_printChanges */,
+				D90B29522A5A6ACD00DFF3A4 /* 04_Scope */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -191,13 +208,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */,
+				D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */,
 				D9338F302A34565A00B8ADDA /* Counter.swift in Sources */,
+				D90B29542A5AC1BB00DFF3A4 /* TwoCounterView.swift in Sources */,
 				D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */,
 				D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */,
-				D9338F1C2A3454E200B8ADDA /* ContentView.swift in Sources */,
+				D9338F1C2A3454E200B8ADDA /* RootView.swift in Sources */,
 				D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */,
 				D9338F2C2A34564800B8ADDA /* CounterView.swift in Sources */,
 				D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */,
+				D921E9042A56BC7400949A78 /* Root.swift in Sources */,
 				D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

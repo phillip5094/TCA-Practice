@@ -24,15 +24,16 @@ struct CounterView: View {
                     viewStore.send(.increaseButtonTapped)
                 }
             }
-            .scaleEffect(1.5)
         }
     }
 }
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(
-            store: Store(initialState: Counter.State(), reducer: Counter())
-        )
+        NavigationView {
+            CounterView(
+                store: Store(initialState: Counter.State(), reducer: Counter())
+            )
+        }
     }
 }

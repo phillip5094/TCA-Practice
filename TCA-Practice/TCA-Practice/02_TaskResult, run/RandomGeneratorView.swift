@@ -25,12 +25,13 @@ struct RandomGeneratorView: View {
                 }
             }
         }
-        ._printChanges("Philip")
     }
 }
 
 struct RandomGeneratorView_Previews: PreviewProvider {
     static var previews: some View {
-        RandomGeneratorView(store: .init(initialState: RandomGenerator.State(), reducer: RandomGenerator()))
+        NavigationView {
+            RandomGeneratorView(store: .init(initialState: RandomGenerator.State(), reducer: RandomGenerator()))
+        }
     }
 }
