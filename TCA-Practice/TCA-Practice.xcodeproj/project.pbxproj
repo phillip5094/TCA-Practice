@@ -19,6 +19,10 @@
 		D9338F302A34565A00B8ADDA /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F2F2A34565A00B8ADDA /* Counter.swift */; };
 		D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FC0962A39DFAB0023EBEA /* RandomGeneratorView.swift */; };
 		D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */; };
+		D9655E912A5EB85A0058981D /* BakeryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E902A5EB85A0058981D /* BakeryView.swift */; };
+		D9655E932A5EB8600058981D /* BakingMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E922A5EB8600058981D /* BakingMachineView.swift */; };
+		D9655E952A5EB9260058981D /* Bakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E942A5EB9260058981D /* Bakery.swift */; };
+		D9655E972A5EB9AD0058981D /* BakingMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E962A5EB9AD0058981D /* BakingMachine.swift */; };
 		D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECB2262A38AD10003050CC /* RandomAPI.swift */; };
 		D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */; };
 		D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */; };
@@ -37,6 +41,10 @@
 		D9338F2F2A34565A00B8ADDA /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		D93FC0962A39DFAB0023EBEA /* RandomGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGeneratorView.swift; sourceTree = "<group>"; };
 		D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGenerator.swift; sourceTree = "<group>"; };
+		D9655E902A5EB85A0058981D /* BakeryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryView.swift; sourceTree = "<group>"; };
+		D9655E922A5EB8600058981D /* BakingMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakingMachineView.swift; sourceTree = "<group>"; };
+		D9655E942A5EB9260058981D /* Bakery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bakery.swift; sourceTree = "<group>"; };
+		D9655E962A5EB9AD0058981D /* BakingMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakingMachine.swift; sourceTree = "<group>"; };
 		D9ECB2262A38AD10003050CC /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 		D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonView.swift; sourceTree = "<group>"; };
 		D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButton.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 				D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */,
 				D9F6B0F42A46C2B300FA4716 /* 03_printChanges */,
 				D90B29522A5A6ACD00DFF3A4 /* 04_Scope */,
+				D9655E8F2A5EB7D40058981D /* 05_Parent-Child Event Communication */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -110,6 +119,17 @@
 				D9338F2F2A34565A00B8ADDA /* Counter.swift */,
 			);
 			path = "01_ReducerProtocol, StoreOf, WithViewStore";
+			sourceTree = "<group>";
+		};
+		D9655E8F2A5EB7D40058981D /* 05_Parent-Child Event Communication */ = {
+			isa = PBXGroup;
+			children = (
+				D9655E902A5EB85A0058981D /* BakeryView.swift */,
+				D9655E942A5EB9260058981D /* Bakery.swift */,
+				D9655E922A5EB8600058981D /* BakingMachineView.swift */,
+				D9655E962A5EB9AD0058981D /* BakingMachine.swift */,
+			);
+			path = "05_Parent-Child Event Communication";
 			sourceTree = "<group>";
 		};
 		D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */ = {
@@ -210,15 +230,19 @@
 				D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */,
 				D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */,
 				D9338F302A34565A00B8ADDA /* Counter.swift in Sources */,
+				D9655E912A5EB85A0058981D /* BakeryView.swift in Sources */,
 				D90B29542A5AC1BB00DFF3A4 /* TwoCounterView.swift in Sources */,
+				D9655E932A5EB8600058981D /* BakingMachineView.swift in Sources */,
 				D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */,
 				D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */,
 				D9338F1C2A3454E200B8ADDA /* RootView.swift in Sources */,
 				D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */,
+				D9655E972A5EB9AD0058981D /* BakingMachine.swift in Sources */,
 				D9338F2C2A34564800B8ADDA /* CounterView.swift in Sources */,
 				D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */,
 				D921E9042A56BC7400949A78 /* Root.swift in Sources */,
 				D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */,
+				D9655E952A5EB9260058981D /* Bakery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

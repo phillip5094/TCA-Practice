@@ -14,6 +14,7 @@ struct Root: ReducerProtocol {
         var randomGenerator = RandomGenerator.State()
         var twoButton = TwoButton.State()
         var twoCounter = TwoCounter.State()
+        var bakery = Bakery.State()
     }
     
     enum Action: Equatable {
@@ -22,6 +23,7 @@ struct Root: ReducerProtocol {
         case randomGenerator(RandomGenerator.Action)
         case twoButton(TwoButton.Action)
         case twoCounter(TwoCounter.Action)
+        case bakery(Bakery.Action)
     }
     
     var body: some ReducerProtocol<State, Action> {
@@ -39,6 +41,10 @@ struct Root: ReducerProtocol {
         
         Scope(state: \.twoCounter, action: /Action.twoCounter) {
             TwoCounter()
+        }
+        
+        Scope(state: \.bakery, action: /Action.bakery) {
+            Bakery()
         }
         
         Reduce { state, action in

@@ -41,6 +41,13 @@ struct RootView: View {
                     )
                     .navigationTitle("Two Counter")
                 }
+                
+                NavigationLink("05_Parent-Child Event Communication") {
+                    BakeryView(
+                        store: self.store.scope(state: \.bakery, action: Root.Action.bakery)
+                    )
+                    .navigationTitle("Parent-Child Event Communication")
+                }
             }
             .onAppear { ViewStore(self.store).send(.onAppear) }
         }
