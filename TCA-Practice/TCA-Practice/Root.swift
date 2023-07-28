@@ -15,6 +15,7 @@ struct Root: ReducerProtocol {
         var twoButton = TwoButton.State()
         var twoCounter = TwoCounter.State()
         var bakery = Bakery.State()
+        var myWebPage = MyWebPage.State()
     }
     
     enum Action: Equatable {
@@ -24,6 +25,7 @@ struct Root: ReducerProtocol {
         case twoButton(TwoButton.Action)
         case twoCounter(TwoCounter.Action)
         case bakery(Bakery.Action)
+        case myWebPage(MyWebPage.Action)
     }
     
     var body: some ReducerProtocol<State, Action> {
@@ -45,6 +47,10 @@ struct Root: ReducerProtocol {
         
         Scope(state: \.bakery, action: /Action.bakery) {
             Bakery()
+        }
+        
+        Scope(state: \.myWebPage, action: /Action.myWebPage) {
+            MyWebPage()
         }
         
         Reduce { state, action in

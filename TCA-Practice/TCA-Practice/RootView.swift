@@ -48,6 +48,12 @@ struct RootView: View {
                     )
                     .navigationTitle("Parent-Child Event Communication")
                 }
+                
+                NavigationLink("06_WebView") {
+                    MyWebPageView(
+                        store: self.store.scope(state: \.myWebPage, action: Root.Action.myWebPage)
+                    )
+                }
             }
             .onAppear { ViewStore(self.store).send(.onAppear) }
         }
