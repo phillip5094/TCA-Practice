@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct Root: ReducerProtocol {
+struct Root: Reducer {
     struct State: Equatable {
         var counter = Counter.State()
         var randomGenerator = RandomGenerator.State()
@@ -28,7 +28,7 @@ struct Root: ReducerProtocol {
         case myWebPage(MyWebPage.Action)
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Scope(state: \.counter, action: /Action.counter) {
             Counter()
         }

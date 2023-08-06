@@ -12,7 +12,9 @@ import ComposableArchitecture
 struct TCA_PracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView(store: .init(initialState: Root.State(), reducer: Root()._printChanges()))
+            RootView(store: Store(initialState: Root.State()) {
+                Root()
+            })
         }
     }
 }

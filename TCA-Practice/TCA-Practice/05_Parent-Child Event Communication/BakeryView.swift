@@ -44,7 +44,9 @@ struct BakeryView: View {
 struct BakeryView_Previews: PreviewProvider {
     static var previews: some View {
         BakeryView(
-            store: Store(initialState: .init(), reducer: Bakery())
+            store: Store(initialState: .init()) {
+                Bakery()
+            }
         )
     }
 }

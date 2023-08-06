@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct WebViewReducer: ReducerProtocol {
+struct WebViewReducer: Reducer {
     struct State: Equatable {
         fileprivate weak var webViewController: WebViewController?
     }
@@ -29,7 +29,7 @@ struct WebViewReducer: ReducerProtocol {
         case didFailProvisionalNavigation
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case let .setWebViewController(webViewController):
             state.webViewController = webViewController

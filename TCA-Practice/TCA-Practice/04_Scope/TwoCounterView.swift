@@ -26,7 +26,9 @@ struct TwoCounterView: View {
                 Text("Counter2")
                 Spacer()
                 CounterView(
-                    store: Store(initialState: Counter.State(), reducer: Counter()._printChanges())
+                    store: Store(initialState: Counter.State()) {
+                        Counter()
+                    }
                 )
             }
             
@@ -34,7 +36,7 @@ struct TwoCounterView: View {
                 Text("Reset Counter")
                 Spacer()
                 Button("OK") {
-                    ViewStore(self.store).send(.resetCounter)
+                    self.store.send(.resetCounter)
                 }
             }
         }
@@ -45,7 +47,9 @@ struct TwoCounterView: View {
 struct TwoCounterView_Previews: PreviewProvider {
     static var previews: some View {
         TwoCounterView(
-            store: Store(initialState: TwoCounter.State(), reducer: TwoCounter())
+            store: Store(initialState: TwoCounter.State()) {
+                TwoCounter()
+            }
         )
     }
 }

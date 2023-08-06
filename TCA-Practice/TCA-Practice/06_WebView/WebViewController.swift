@@ -11,19 +11,15 @@ import ComposableArchitecture
 
 class WebViewController: UIViewController {
     private let url: URL
-    private let viewStore: ViewStoreOf<WebViewReducer>?
+    private let store: StoreOf<WebViewReducer>?
     private let webView: WKWebView
     
     init(url: URL, store: StoreOf<WebViewReducer>?) {
         self.url = url
         self.webView = WKWebView(frame: .zero)
-        if let store {
-            self.viewStore = ViewStore(store)
-        } else {
-            self.viewStore = nil
-        }
+        self.store = store
         super.init(nibName: nil, bundle: nil)
-        viewStore?.send(.setWebViewController(self))
+        store?.send(.setWebViewController(self))
     }
     
     required init?(coder: NSCoder) {
@@ -70,16 +66,16 @@ class WebViewController: UIViewController {
             guard let url = self.webView.url else {
                 return
             }
-            self.viewStore?.send(.urlChanged(url))
+            self.store?.send(.urlChanged(url))
         } else if keyPath == #keyPath(WKWebView.title) {
             guard let title = self.webView.title else {
                 return
             }
-            self.viewStore?.send(.titleChanged(title))
+            self.store?.send(.titleChanged(title))
         } else if keyPath == #keyPath(WKWebView.canGoBack) {
-            self.viewStore?.send(.canGoBack(self.webView.canGoBack))
+            self.store?.send(.canGoBack(self.webView.canGoBack))
         } else if keyPath == #keyPath(WKWebView.canGoForward) {
-            self.viewStore?.send(.canGoForward(self.webView.canGoForward))
+            self.store?.send(.canGoForward(self.webView.canGoForward))
         }
     }
 }
@@ -87,24 +83,24 @@ class WebViewController: UIViewController {
 // MARK: - WKNavigationDelegate
 extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction) async -> WKNavigationActionPolicy {
-        viewStore?.send(.decidePolicyForNavigationAction)
+        store?.send(.decidePolicyForNavigationAction)
         return .allow
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse) async -> WKNavigationResponsePolicy {
-        viewStore?.send(.decidePolicyForNavigationResponse)
+        store?.send(.decidePolicyForNavigationResponse)
         return .allow
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        viewStore?.send(.didFinishNavigation)
+        store?.send(.didFinishNavigation)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        viewStore?.send(.didFailNaviation)
+        store?.send(.didFailNaviation)
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        viewStore?.send(.didFailProvisionalNavigation)
+        store?.send(.didFailProvisionalNavigation)
     }
 }

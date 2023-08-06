@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct Counter: ReducerProtocol {
+struct Counter: Reducer {
     struct State: Equatable {
         var count = 0
     }
@@ -18,7 +18,7 @@ struct Counter: ReducerProtocol {
         case decreaseButtonTapped
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .increaseButtonTapped:
             state.count += 1

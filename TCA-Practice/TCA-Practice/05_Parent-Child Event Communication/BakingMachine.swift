@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct BakingMachine: ReducerProtocol {
+struct BakingMachine: Reducer {
     struct State: Equatable {
         var running = false
     }
@@ -20,7 +20,7 @@ struct BakingMachine: ReducerProtocol {
         case finishBaking        
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .buttonTapped:
             return .run { send in

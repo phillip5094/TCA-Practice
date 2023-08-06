@@ -31,7 +31,11 @@ struct RandomGeneratorView: View {
 struct RandomGeneratorView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            RandomGeneratorView(store: .init(initialState: RandomGenerator.State(), reducer: RandomGenerator()))
+            RandomGeneratorView(
+                store: .init(initialState: RandomGenerator.State()) {
+                    RandomGenerator()
+                }
+            )
         }
     }
 }

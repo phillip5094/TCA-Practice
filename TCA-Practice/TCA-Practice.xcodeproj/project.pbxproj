@@ -28,6 +28,7 @@
 		D9655E932A5EB8600058981D /* BakingMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E922A5EB8600058981D /* BakingMachineView.swift */; };
 		D9655E952A5EB9260058981D /* Bakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E942A5EB9260058981D /* Bakery.swift */; };
 		D9655E972A5EB9AD0058981D /* BakingMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9655E962A5EB9AD0058981D /* BakingMachine.swift */; };
+		D995EAC22A800544008601A0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D995EAC12A800544008601A0 /* README.md */; };
 		D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECB2262A38AD10003050CC /* RandomAPI.swift */; };
 		D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */; };
 		D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */; };
@@ -55,6 +56,7 @@
 		D9655E922A5EB8600058981D /* BakingMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakingMachineView.swift; sourceTree = "<group>"; };
 		D9655E942A5EB9260058981D /* Bakery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bakery.swift; sourceTree = "<group>"; };
 		D9655E962A5EB9AD0058981D /* BakingMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakingMachine.swift; sourceTree = "<group>"; };
+		D995EAC12A800544008601A0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D9ECB2262A38AD10003050CC /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
 		D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonView.swift; sourceTree = "<group>"; };
 		D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButton.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				D90B29522A5A6ACD00DFF3A4 /* 04_Scope */,
 				D9655E8F2A5EB7D40058981D /* 05_Parent-Child Event Communication */,
 				D90719882A6927BD00B47B10 /* 06_WebView */,
+				D995EAC02A80047A008601A0 /* 07_Update-TCA-1.0.0 */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -153,6 +156,14 @@
 				D9655E962A5EB9AD0058981D /* BakingMachine.swift */,
 			);
 			path = "05_Parent-Child Event Communication";
+			sourceTree = "<group>";
+		};
+		D995EAC02A80047A008601A0 /* 07_Update-TCA-1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				D995EAC12A800544008601A0 /* README.md */,
+			);
+			path = "07_Update-TCA-1.0.0";
 			sourceTree = "<group>";
 		};
 		D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */ = {
@@ -238,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D995EAC22A800544008601A0 /* README.md in Resources */,
 				D9338F212A3454E300B8ADDA /* Preview Assets.xcassets in Resources */,
 				D9338F1E2A3454E300B8ADDA /* Assets.xcassets in Resources */,
 			);
@@ -477,8 +489,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.54.0;
+				kind = exactVersion;
+				version = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

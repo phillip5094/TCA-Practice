@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct Bakery: ReducerProtocol {
+struct Bakery: Reducer {
     struct State: Equatable {
         var baking = false
         var numberOfBread = 0
@@ -23,7 +23,7 @@ struct Bakery: ReducerProtocol {
     }
 
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Scope(state: \.bakingMachine, action: /Action.bakingMachine) {
             BakingMachine()
         }

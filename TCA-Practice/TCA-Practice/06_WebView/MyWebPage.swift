@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct MyWebPage: ReducerProtocol {
+struct MyWebPage: Reducer {
     struct State: Equatable {
         var isLoading = true
         var navigationBarTitle = ""
@@ -27,7 +27,7 @@ struct MyWebPage: ReducerProtocol {
         case webView(WebViewReducer.Action)
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         Scope(state: \.webView, action: /Action.webView) {
             WebViewReducer()
         }

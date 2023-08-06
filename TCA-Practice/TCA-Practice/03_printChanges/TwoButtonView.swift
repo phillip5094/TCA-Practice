@@ -30,7 +30,9 @@ struct TwoButtonView: View {
 struct TwoButtonView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TwoButtonView(store: .init(initialState: TwoButton.State(), reducer: TwoButton()._printChanges()))
+            TwoButtonView(store: .init(initialState: TwoButton.State()){
+                TwoButton()
+            })
         }
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct TwoCounter: ReducerProtocol {
+struct TwoCounter: Reducer {
     struct State: Equatable {
         // 1️⃣ : 자식 State를 부모 State에 포함.
         var counter1 = Counter.State()
@@ -20,7 +20,7 @@ struct TwoCounter: ReducerProtocol {
         case counter1(Counter.Action)
     }
     
-    var body: some ReducerProtocol<State, Action> {
+    var body: some Reducer<State, Action> {
         /*
          3️⃣ : body 프로퍼티 안에 Scope를 사용해서 자식 Reducer 정의.
          (State.counter1을 state로 가지고, Counter.Action을 action으로 가진 자식 Reducer)

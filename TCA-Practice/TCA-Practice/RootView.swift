@@ -14,7 +14,7 @@ struct RootView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink("01_ReducerProtocol, StoreOf, WithViewStore") {
+                NavigationLink("01_Reducer, StoreOf, WithViewStore") {
                     CounterView(
                         store: self.store.scope(state: \.counter, action: Root.Action.counter)
                     )
@@ -46,7 +46,7 @@ struct RootView: View {
                     BakeryView(
                         store: self.store.scope(state: \.bakery, action: Root.Action.bakery)
                     )
-                    .navigationTitle("Parent-Child Event Communication")
+                    .navigationTitle("My Bakery")
                 }
                 
                 NavigationLink("06_WebView") {
@@ -55,13 +55,19 @@ struct RootView: View {
                     )
                 }
             }
-            .onAppear { ViewStore(self.store).send(.onAppear) }
+            .navigationTitle("My TCA Studies")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear { self.store.send(.onAppear) }
         }
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(store: .init(initialState: Root.State(), reducer: Root()))
+        RootView(
+            store: .init(initialState: Root.State()) {
+                Root()
+            }
+        )
     }
 }

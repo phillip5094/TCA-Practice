@@ -8,7 +8,7 @@
 import Foundation
 import ComposableArchitecture
 
-struct RandomGenerator: ReducerProtocol {
+struct RandomGenerator: Reducer {
     struct State: Equatable {
         var randomString: String? = nil
         var proceeding = false
@@ -20,7 +20,7 @@ struct RandomGenerator: ReducerProtocol {
         case setProceeding(_ flag: Bool)
     }
     
-    func reduce(into state: inout State, action: Action) -> EffectTask<Action> {
+    func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .buttonTapped:
             return .run { send in

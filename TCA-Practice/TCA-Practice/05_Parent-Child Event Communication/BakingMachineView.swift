@@ -16,7 +16,7 @@ struct BakingMachineView: View {
             VStack {
                 Text("제빵기 입니다.")
                 Button("빵 다 만들었어욥") {
-                    ViewStore(store).send(.buttonTapped)
+                    viewStore.send(.buttonTapped)
                 }
                 .disabled(!viewStore.running)
                 .buttonStyle(.bordered)
@@ -28,7 +28,9 @@ struct BakingMachineView: View {
 struct BakingMachineView_Previews: PreviewProvider {
     static var previews: some View {
         BakingMachineView(
-            store: Store(initialState: .init(), reducer: BakingMachine())
+            store: Store(initialState: BakingMachine.State()) {
+                BakingMachine()
+            }
         )
     }
 }

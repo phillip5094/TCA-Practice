@@ -59,7 +59,9 @@ struct MyWebPageView: View {
 struct MyWebPageView_Previews: PreviewProvider {
     static var previews: some View {
         MyWebPageView(
-            store: Store(initialState: MyWebPage.State(), reducer: MyWebPage())
+            store: Store(initialState: MyWebPage.State()) {
+                MyWebPage()
+            }
         )
     }
 }
