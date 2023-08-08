@@ -54,6 +54,13 @@ struct RootView: View {
                         store: self.store.scope(state: \.myWebPage, action: Root.Action.myWebPage)
                     )
                 }
+                
+                NavigationLink("08_Binding") {
+                    URLEncoderView(
+                        store: self.store.scope(state: \.urlEncoder, action: Root.Action.urlEncoder)
+                    )
+                    .navigationTitle("URL Encoder")
+                }
             }
             .navigationTitle("My TCA Studies")
             .navigationBarTitleDisplayMode(.inline)
