@@ -27,7 +27,7 @@ struct RandomGenerator: Reducer {
                 await send(.setProceeding(true))
                 await send(.randomStringResponse(
                     TaskResult { try await
-                        RandomAPI.requestString()
+                        RandomAPI().requestUUID(length: 16)
                     })
                 )
                 await send(.setProceeding(false))

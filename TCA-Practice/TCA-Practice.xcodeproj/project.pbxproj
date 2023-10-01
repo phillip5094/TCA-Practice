@@ -14,6 +14,8 @@
 		D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B29552A5AC1C000DFF3A4 /* TwoCounter.swift */; };
 		D90BDA962A70259D002430F9 /* MyWebPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BDA952A70259D002430F9 /* MyWebPageView.swift */; };
 		D90BDA982A7027FD002430F9 /* MyWebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90BDA972A7027FD002430F9 /* MyWebPage.swift */; };
+		D91C2D022AC2D98C007D82F0 /* DependencyManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C2D012AC2D98C007D82F0 /* DependencyManagerView.swift */; };
+		D91C2D042AC2D999007D82F0 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C2D032AC2D999007D82F0 /* DependencyManager.swift */; };
 		D921E9042A56BC7400949A78 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921E9032A56BC7400949A78 /* Root.swift */; };
 		D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */; };
 		D9338F1C2A3454E200B8ADDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9338F1B2A3454E200B8ADDA /* RootView.swift */; };
@@ -44,6 +46,9 @@
 		D90B29552A5AC1C000DFF3A4 /* TwoCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounter.swift; sourceTree = "<group>"; };
 		D90BDA952A70259D002430F9 /* MyWebPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebPageView.swift; sourceTree = "<group>"; };
 		D90BDA972A7027FD002430F9 /* MyWebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWebPage.swift; sourceTree = "<group>"; };
+		D91C2D012AC2D98C007D82F0 /* DependencyManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManagerView.swift; sourceTree = "<group>"; };
+		D91C2D032AC2D999007D82F0 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		D91C2D052AC2EDBC007D82F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D921E9032A56BC7400949A78 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		D9338F162A3454E200B8ADDA /* TCA-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PracticeApp.swift; sourceTree = "<group>"; };
@@ -99,6 +104,23 @@
 			path = 04_Scope;
 			sourceTree = "<group>";
 		};
+		D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency-Provided */ = {
+			isa = PBXGroup;
+			children = (
+				D91C2D012AC2D98C007D82F0 /* DependencyManagerView.swift */,
+				D91C2D032AC2D999007D82F0 /* DependencyManager.swift */,
+			);
+			path = "09_Dependency-Provided";
+			sourceTree = "<group>";
+		};
+		D91C2D002AC2D379007D82F0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D9ECB2262A38AD10003050CC /* RandomAPI.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		D9338F0D2A3454E100B8ADDA = {
 			isa = PBXGroup;
 			children = (
@@ -118,9 +140,11 @@
 		D9338F182A3454E200B8ADDA /* TCA-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				D91C2D052AC2EDBC007D82F0 /* Info.plist */,
 				D9338F192A3454E200B8ADDA /* TCA_PracticeApp.swift */,
 				D921E9032A56BC7400949A78 /* Root.swift */,
 				D9338F1B2A3454E200B8ADDA /* RootView.swift */,
+				D91C2D002AC2D379007D82F0 /* Common */,
 				D9338F2A2A34563400B8ADDA /* 01_ReducerProtocol, StoreOf, WithViewStore */,
 				D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */,
 				D9F6B0F42A46C2B300FA4716 /* 03_printChanges */,
@@ -129,6 +153,7 @@
 				D90719882A6927BD00B47B10 /* 06_WebView */,
 				D995EAC02A80047A008601A0 /* 07_Update-TCA-1.0.0 */,
 				D9692EC92A80C61D006498A6 /* 08_Binding */,
+				D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency-Provided */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -183,7 +208,6 @@
 		D9ECB2252A38ACFC003050CC /* 02_TaskResult, run */ = {
 			isa = PBXGroup;
 			children = (
-				D9ECB2262A38AD10003050CC /* RandomAPI.swift */,
 				D93FC0962A39DFAB0023EBEA /* RandomGeneratorView.swift */,
 				D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */,
 			);
@@ -278,6 +302,7 @@
 			files = (
 				D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */,
 				D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */,
+				D91C2D042AC2D999007D82F0 /* DependencyManager.swift in Sources */,
 				D9338F302A34565A00B8ADDA /* Counter.swift in Sources */,
 				D9655E912A5EB85A0058981D /* BakeryView.swift in Sources */,
 				D9692ECD2A80C653006498A6 /* URLEncoder.swift in Sources */,
@@ -295,6 +320,7 @@
 				D90BDA982A7027FD002430F9 /* MyWebPage.swift in Sources */,
 				D907198E2A692A4200B47B10 /* WebViewReducer.swift in Sources */,
 				D93FC0972A39DFAB0023EBEA /* RandomGeneratorView.swift in Sources */,
+				D91C2D022AC2D98C007D82F0 /* DependencyManagerView.swift in Sources */,
 				D921E9042A56BC7400949A78 /* Root.swift in Sources */,
 				D907198C2A69294C00B47B10 /* WebView.swift in Sources */,
 				D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */,
@@ -430,6 +456,7 @@
 				DEVELOPMENT_TEAM = KYG7C4ND55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Practice/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +486,7 @@
 				DEVELOPMENT_TEAM = KYG7C4ND55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCA-Practice/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,7 +534,7 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.0;
+				version = 1.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

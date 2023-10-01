@@ -61,6 +61,13 @@ struct RootView: View {
                     )
                     .navigationTitle("URL Encoder")
                 }
+                
+                NavigationLink("09_Dependency") {
+                    DependencyManagerView(
+                        store: self.store.scope(state: \.dependencyManager, action: Root.Action.dependencyManager)
+                    )
+                    .navigationTitle("Dependency Manager")
+                }
             }
             .navigationTitle("My TCA Studies")
             .navigationBarTitleDisplayMode(.inline)

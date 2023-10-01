@@ -17,6 +17,7 @@ struct Root: Reducer {
         var bakery = Bakery.State()
         var myWebPage = MyWebPage.State()
         var urlEncoder = URLEncoder.State()
+        var dependencyManager = DependencyManager.State()
     }
     
     enum Action: Equatable {
@@ -28,6 +29,7 @@ struct Root: Reducer {
         case bakery(Bakery.Action)
         case myWebPage(MyWebPage.Action)
         case urlEncoder(URLEncoder.Action)
+        case dependencyManager(DependencyManager.Action)
     }
     
     var body: some Reducer<State, Action> {
@@ -57,6 +59,10 @@ struct Root: Reducer {
         
         Scope(state: \.urlEncoder, action: /Action.urlEncoder) {
             URLEncoder()
+        }
+        
+        Scope(state: \.dependencyManager, action: /Action.dependencyManager) {
+            DependencyManager()
         }
         
         Reduce { state, action in
