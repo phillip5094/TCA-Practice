@@ -34,6 +34,9 @@
 		D9692ECD2A80C653006498A6 /* URLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9692ECC2A80C653006498A6 /* URLEncoder.swift */; };
 		D995EAC22A800544008601A0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D995EAC12A800544008601A0 /* README.md */; };
 		D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECB2262A38AD10003050CC /* RandomAPI.swift */; };
+		D9F5FA2B2ACC404A005A742F /* NumbersAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5FA2A2ACC404A005A742F /* NumbersAPIClient.swift */; };
+		D9F5FA2D2ACC6357005A742F /* RandomStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5FA2C2ACC6357005A742F /* RandomStringView.swift */; };
+		D9F5FA312ACC6374005A742F /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5FA302ACC6374005A742F /* RandomString.swift */; };
 		D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */; };
 		D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +70,9 @@
 		D9692ECC2A80C653006498A6 /* URLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEncoder.swift; sourceTree = "<group>"; };
 		D995EAC12A800544008601A0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D9ECB2262A38AD10003050CC /* RandomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAPI.swift; sourceTree = "<group>"; };
+		D9F5FA2A2ACC404A005A742F /* NumbersAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersAPIClient.swift; sourceTree = "<group>"; };
+		D9F5FA2C2ACC6357005A742F /* RandomStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringView.swift; sourceTree = "<group>"; };
+		D9F5FA302ACC6374005A742F /* RandomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomString.swift; sourceTree = "<group>"; };
 		D9F6B0F52A46C4BB00FA4716 /* TwoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButtonView.swift; sourceTree = "<group>"; };
 		D9F6B0F72A46C4C700FA4716 /* TwoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,19 +110,20 @@
 			path = 04_Scope;
 			sourceTree = "<group>";
 		};
-		D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency-Provided */ = {
+		D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency */ = {
 			isa = PBXGroup;
 			children = (
 				D91C2D012AC2D98C007D82F0 /* DependencyManagerView.swift */,
 				D91C2D032AC2D999007D82F0 /* DependencyManager.swift */,
 			);
-			path = "09_Dependency-Provided";
+			path = 09_Dependency;
 			sourceTree = "<group>";
 		};
 		D91C2D002AC2D379007D82F0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				D9ECB2262A38AD10003050CC /* RandomAPI.swift */,
+				D9F5FA2A2ACC404A005A742F /* NumbersAPIClient.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -153,7 +160,8 @@
 				D90719882A6927BD00B47B10 /* 06_WebView */,
 				D995EAC02A80047A008601A0 /* 07_Update-TCA-1.0.0 */,
 				D9692EC92A80C61D006498A6 /* 08_Binding */,
-				D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency-Provided */,
+				D91C2CFF2AC2CEEF007D82F0 /* 09_Dependency */,
+				D9F5FA292ACC4001005A742F /* 10_Custom Dependency */,
 				D9338F1D2A3454E300B8ADDA /* Assets.xcassets */,
 				D9338F1F2A3454E300B8ADDA /* Preview Content */,
 			);
@@ -212,6 +220,15 @@
 				D93FC0982A39DFB50023EBEA /* RandomGenerator.swift */,
 			);
 			path = "02_TaskResult, run";
+			sourceTree = "<group>";
+		};
+		D9F5FA292ACC4001005A742F /* 10_Custom Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5FA2C2ACC6357005A742F /* RandomStringView.swift */,
+				D9F5FA302ACC6374005A742F /* RandomString.swift */,
+			);
+			path = "10_Custom Dependency";
 			sourceTree = "<group>";
 		};
 		D9F6B0F42A46C2B300FA4716 /* 03_printChanges */ = {
@@ -300,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F5FA2B2ACC404A005A742F /* NumbersAPIClient.swift in Sources */,
 				D93FC0992A39DFB50023EBEA /* RandomGenerator.swift in Sources */,
 				D90B29562A5AC1C000DFF3A4 /* TwoCounter.swift in Sources */,
 				D91C2D042AC2D999007D82F0 /* DependencyManager.swift in Sources */,
@@ -312,6 +330,7 @@
 				D90BDA962A70259D002430F9 /* MyWebPageView.swift in Sources */,
 				D9ECB2272A38AD10003050CC /* RandomAPI.swift in Sources */,
 				D9F6B0F82A46C4C700FA4716 /* TwoButton.swift in Sources */,
+				D9F5FA312ACC6374005A742F /* RandomString.swift in Sources */,
 				D9338F1C2A3454E200B8ADDA /* RootView.swift in Sources */,
 				D9338F1A2A3454E200B8ADDA /* TCA_PracticeApp.swift in Sources */,
 				D9655E972A5EB9AD0058981D /* BakingMachine.swift in Sources */,
@@ -324,6 +343,7 @@
 				D921E9042A56BC7400949A78 /* Root.swift in Sources */,
 				D907198C2A69294C00B47B10 /* WebView.swift in Sources */,
 				D9F6B0F62A46C4BB00FA4716 /* TwoButtonView.swift in Sources */,
+				D9F5FA2D2ACC6357005A742F /* RandomStringView.swift in Sources */,
 				D9655E952A5EB9260058981D /* Bakery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

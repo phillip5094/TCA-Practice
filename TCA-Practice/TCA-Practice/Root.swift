@@ -18,6 +18,7 @@ struct Root: Reducer {
         var myWebPage = MyWebPage.State()
         var urlEncoder = URLEncoder.State()
         var dependencyManager = DependencyManager.State()
+        var randomString = RandomString.State()
     }
     
     enum Action: Equatable {
@@ -30,6 +31,7 @@ struct Root: Reducer {
         case myWebPage(MyWebPage.Action)
         case urlEncoder(URLEncoder.Action)
         case dependencyManager(DependencyManager.Action)
+        case randomString(RandomString.Action)
     }
     
     var body: some Reducer<State, Action> {
@@ -63,6 +65,10 @@ struct Root: Reducer {
         
         Scope(state: \.dependencyManager, action: /Action.dependencyManager) {
             DependencyManager()
+        }
+        
+        Scope(state: \.randomString, action: /Action.randomString) {
+            RandomString()
         }
         
         Reduce { state, action in

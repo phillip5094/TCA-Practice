@@ -68,6 +68,13 @@ struct RootView: View {
                     )
                     .navigationTitle("Dependency Manager")
                 }
+                
+                NavigationLink("10_Custom Dependency") {
+                    RandomStringView(
+                        store: self.store.scope(state: \.randomString, action: Root.Action.randomString)
+                    )
+                    .navigationTitle("Random String")
+                }
             }
             .navigationTitle("My TCA Studies")
             .navigationBarTitleDisplayMode(.inline)
